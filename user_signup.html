@@ -9,84 +9,100 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   
 <style>
+    .b{border: 2px solid red;}
 
-
+    .xs{display: none;}
     .w{font-size:30px;}
     h2{font-size:20px;}
     .desk{height:100vh;}
-    .de{width: 450px;;}
+    .de{width: 550px;;}
 
     @media only screen and (max-width:420px){
-
+    .f-c{flex-direction: column;}
     }
-
     @media only screen and (max-width:375px){
-        .shadow-lg { box-shadow:none!important;} 
-    
+    .shadow-lg { box-shadow:none!important;} 
+    .align-items-center {
+    align-items: start!important;
+} 
     }
+    
+ 
 </style>
     
 </head>
 <body>
-
 <!-- ------------------desktop dimension--------------------- -->
+
 <div class="desktop"> 
-    <div class="desk d-flex justify-content-start justify-content-center align-items-start align-items-sm-center ">
-        <div class="de shadow-lg ">
-
-        <div class="sign text-center pt-3">
+        <div class="desk d-flex justify-content-center  align-items-center ">
+            
+            <div class="de shadow-lg ">
     
-            <h1 class="w fw-bold">Sign up</h1>
-        <p class="text-muted "><b>Create an account. It's free</b></p>
-        </div>
+            <div class="sign text-center pt-3">
+                <h1 class="w fw-bold">Sign up</h1>
+            <p class="text-muted "><b>Create an account. It's free</b></p>
+            </div>
+            
+            <div class="sel d-flex justify-content-between px-5  fs-5">
+                <div> As a User <input type="radio" onclick="user()" class="form-check-input" name="user" id="user" ></div>
+            <div>As a Mech <input type="radio" onclick="mech()" class="form-check-input" name="user_d" id="mech" checked></div>
+            </div>
         
-        <div class="sel d-flex justify-content-between px-5  fs-5">
-            <div> As a User <input type="radio" onclick="user()" class="form-check-input" name="user_d" id="user" checked></div>
-        <div>As a Mech <input type="radio" onclick="mech()" class="form-check-input" name="user" id="mech"></div>
-        </div>
-    
-    
-         <form>
-        <div class="pt-4 px-5 ">
-            <h5>Full name</h5>
-            <input class="w-100 p-2 "  type="fname" id="fname" name="fname"><br>
-            <h5>Username</h5>
-            <input class="w-100 p-2 "  type="username" id="username" name="username"><br>
-            <h5>Email</h5>
-            <input class="w-100 p-2" type="email" id="email" name="email" ><br>
-            <h5>Password</h5>
-            <input class="w-100 p-2 "  type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br>
-            <h5>Confirm Password</h5>
-            <input class="w-100 p-2" type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters" ><br>
+        
+             <form>
+            <div class="f-c pt-4 d-flex  px-5 ">
+                <div class="1-5 w-100 pe-0 pe-sm-3 ">
+                    <h5>Full name</h5>
+                    <input class="w-100 p-2 "  type="fname" id="fname" name="fname"><br>
+                    <h5>Username</h5>
+                    <input class="w-100 p-2 "  type="username" id="username" name="username"><br>
+                    <h5>Email</h5>
+                    <input class="w-100 p-2" type="email" id="email" name="email" ><br>
+                    <h5>Address</h5>
+                    <input class="w-100 p-2" type="address" id="address" name="address" ><br>
+                     
+                </div>
+                
+           
+                <div class="5-10 w-100 ">
+                    <h5>Services</h5>
+                    <input class="w-100 p-2" type="services" id="services" name="services" ><br>
+
+                    <h5>Phone Number</h5>
+                    <input class="w-100 p-2" type="ph" id="ph" name="ph" ><br>
+                    <h5>Password</h5>
+                    <input class="w-100 p-2 "  type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br>
+                    <h5>Confirm Password</h5>
+                    <input class="w-100 p-2" type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br>  
+                </div>
+                        
+            </div>
+        
+        
+             
+            <div class="text-center pt-4">
+                <button class="btn  btn-primary  px-5 text-white ">Sign up</button>
+            </div>
+             </form>
+            <div class="text-center pt-3">
+                <p>Already have an account? <a href="index.html" class="text-decoration-none">Login</a></p>  
+              </div>
         
         </div>
-    
-    
-         
-        <div class="text-center pt-4">
-            <button type="submit" class="btn  btn-primary  px-5 text-white " >Sign up</button>
         </div>
-         </form>
-        <div class="text-center pt-3">
-            <p>Already have an account? <a href="index.html" class="text-decoration-none">Login</a></p>  
-          </div>
-    
-    </div>
-    </div>
-    </div>
-
+        </div>
 
 
 <script>
 
 
-    function user(){
-            window.location = 'user_signup.html';
-        }
-        function mech(){
-            window.location = 'mech_signup.html';
-        }
-    </script>
-
+function user(){
+        window.location = 'user_signup.html';
+    }
+    function mech(){
+        window.location = 'mech_signup.html';
+    }
+</script>
 </body>
 </html>
